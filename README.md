@@ -4,7 +4,7 @@ Docker-Fluentd-Kibana
 ## Log analitycs using Fluentd, Elasticsearch and Kibana
 
 This container comes built with Fluentd for log processing, Elasticsearch for log storeage and Kibana for log analytics.
-Nginx is also installed and configured for Kibana.
+Nginx is also installed and configured for Kibana.  Supervisord is used for Nginx, Fluentd, and Elasticsearch.
 
 ## Exposed ports
 
@@ -16,6 +16,10 @@ Nginx is also installed and configured for Kibana.
 
 Nginx is confirgured to proxy elastic search port 9200 to 80 which avoids some proxies blocking high ports.
 Kibana comes shipped with a config to use port 80 for elastic search so its ready to go.
+
+## Default command
+
+Supervisord 
 
 ## Volumes
 

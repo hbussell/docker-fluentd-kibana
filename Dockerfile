@@ -30,7 +30,9 @@ RUN \
   echo "\ndaemon off;" >> /etc/nginx/nginx.conf && \
   chown -R www-data:www-data /var/lib/nginx
 
-ADD config/etc/nginx/kibana.conf /etc/nginx/sites-enabled/kibana.conf
+# Replace nginx default site with Kibana, making it accessible on localhost:80.
+RUN unlink /etc/nginx/sites-enabled/default
+ADD config/etc/nginx/kibana.conf /etc/nginx/sites-enabled/default
 
 # Install Kibana.
 RUN \
