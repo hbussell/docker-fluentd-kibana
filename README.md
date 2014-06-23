@@ -21,7 +21,7 @@ Kibana comes shipped with a config to use port 80 for elastic search so its read
 
 ## Default command
 
-Supervisord 
+Supervisord - Start Nginx, Elasticsearch, and Fluentd in the foreground with supervisord.
 
 ## Volumes
 
