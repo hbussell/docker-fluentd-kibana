@@ -12,7 +12,6 @@ Fluentd will be running and accepting messages on port 24224.  You can then star
 ## Exposed ports
 
  - 80 Nginx http
- - 443 Nginx https
  - 9200 Elasticsearch http
  - 9300 Elasticsearch transport
  - 24224 Fluentd
