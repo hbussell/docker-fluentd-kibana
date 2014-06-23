@@ -41,3 +41,10 @@ Note you may want to change the volume -v parameter to set a different data dire
 
     sudo docker run -p 9200:9200 -p 9300:9300 -p 24224:24224 -p 80:80 -v /data:/data  --name docker_fluentd_kibana_inst -i -t hbussell/docker-fluentd-kibana:docker-fluentd-kibana
 
+Running with systemd:
+    
+ - copy to `systemd.fluentd-kibana.service` to  `/etc/systemd/system`
+ - `sudo systemctl enable /etc/systemd/system/systemd.fluentd-kibana.service`
+ - `sudo systemctl start systemd.fluentd-kibana.service`
+
+
